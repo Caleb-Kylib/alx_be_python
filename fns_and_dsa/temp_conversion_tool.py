@@ -16,14 +16,13 @@ def main():
         unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
 
         if unit == "F":
-            converted = convert_to_celsius(temperature)
-            print(f"{temperature}°F is {converted}°C")
+            result = convert_to_celsius(temperature)
+            print(f"{temperature}°F is {result}°C")
         elif unit == "C":
-            converted = convert_to_fahrenheit(temperature)
-            print(f"{temperature}°C is {converted}°F")
+            result = convert_to_fahrenheit(temperature)
+            print(f"{temperature}°C is {result}°F")
         else:
-            raise ValueError("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
-
+            raise ValueError("Invalid unit. Please enter 'C' or 'F'.")
     except ValueError:
         print("Invalid temperature. Please enter a numeric value.")
 
